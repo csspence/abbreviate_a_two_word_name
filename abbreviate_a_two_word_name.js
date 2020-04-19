@@ -11,8 +11,18 @@ Patrick Feeney => P.F
 
 */
 
-function abbrevName(name){
+const abbrevName = (name) => {
+let initials = '';
+for(let i = 0; i < name.length; i++) {
+    if(i === 0) {
+        initials += name[i].toUpperCase();
+        initials += '.';
+    }
+    if(name[i-1] === ' ') {
+        initials += name[i].toUpperCase();
+        break;
+    }
+}
 
-    // code away
-
+return initials;
 }
